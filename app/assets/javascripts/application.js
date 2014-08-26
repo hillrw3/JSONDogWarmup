@@ -44,6 +44,15 @@ $(document).ready(function () {
       }
     ]
   };
-  // Write come code to add the dogs to the table !!!!
+
+
+  var rows = "";
+  $.each(gschoolDogs.dogs, function(){
+    rows += "<tr><td>" + this.owner + "</td><td>" + this.name + "</td><td>" + this.preferences[0].favoriteFood + "</td><td>" + this.preferences[1].favoriteToy + "</td></tr>";
+  });
+
+  $(rows).appendTo('#dogs')
+
+
 });
 
